@@ -1,0 +1,81 @@
+.agreements {
+    display: flex;
+    justify-content: space-between;
+    font-family: Inter;
+}
+
+.agreementsWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 336px;
+}
+
+.tabs {
+    margin-top: 30px;
+    margin-left: 30px;
+
+}
+
+.tabItem {
+    width:288px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+    
+    display: flex;
+    align-items: center;
+    
+    color: #000000;
+}
+
+.tabItemActive {  
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    display: flex;
+    align-items: center;
+    
+    /* primary */
+    
+    color: #CBA977;
+}
+
+
+.confidentialityContainer{
+    margin: 30px;
+}
+
+
+.contentTitle{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 16px 0px;
+}
+
+.contentItem{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    /* or 150% */
+
+
+    /* Dark */
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+}

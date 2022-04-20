@@ -1,0 +1,94 @@
+.TableHeadCell {
+  font-size: 12px !important;
+  color: #717779 !important;
+  padding: 6px 0 !important;
+  padding-right: 3px !important; // чтобы не слипались заголовки 
+}
+
+.TableBodyCell {
+  position: inherit !important;
+  font-size: 12px !important;
+  color: #132026 !important;
+  padding: 6px 0 !important;
+  padding-right: 10px !important; // чтобы не слипались длинные значения 
+  background-color: transparent !important;
+  z-index: 2;
+}
+
+.InputButton {
+  margin: 0 2px;
+  padding: 0px 15px;
+  height: 20px;
+  background-color: #bebebe;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 30px;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.InputButtonSelected {
+  color: #fff;
+  background: #CBA977;
+}
+
+.Commission {
+  display: flex;
+  margin-right: 10px;
+}
+
+.CommissionTitle {
+  margin-right: 7px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  color: #717779;
+}
+
+.CommissionSubTitle {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 30px;
+  color: #132026;
+}
+
+.AskBgGraphic {
+  position: absolute;
+  height: 100%;
+  background-color: #FF7979;
+  opacity: 0.8;
+  right: 0;
+  z-index: 1;
+}
+
+.BidBgGraphic {
+  position: absolute;
+  height: 100%;
+  background-color: #79FFAF;
+  opacity: 0.8;
+  left: 0;
+  z-index: 1;
+}
+
+.popupInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 40px 40px 40px;
+  max-width: 500px;
+}
+
+.popupInfoTitle {
+  font-size: 25px;
+  line-height: 42px;
+}
+
+.FactorButton {
+  min-width: fit-content !important;
+  padding: 4px !important;
+}

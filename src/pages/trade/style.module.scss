@@ -1,0 +1,337 @@
+@import '../../styles/_variables.scss';
+
+.Wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 60px;
+}
+
+.Header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ButtonsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.HeaderButton {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  color: #717779 !important;
+  text-transform: none !important;
+}
+
+.HeaderButtonIcon {
+  margin-right: 10px;
+}
+
+.InfoWrapper {
+  width: 100%;
+  display: flex;
+  // justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #dce5e9;
+  gap: 20px;
+}
+
+.Profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.AvatarIcon {
+  margin-left: 10px;
+  width: 32px;
+  height: 32px;
+}
+
+.ProfileTitlesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ProfileTitle {
+  margin-left: 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #132026;
+}
+
+.ProfileSubTitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #717779;
+}
+
+.VerifiedIcon {
+  margin-left: 5px;
+}
+
+.InfoItem {
+  padding: 8px;
+  min-width: 350px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: $secondaryColor;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.InfoIconWrapper {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.InfoTitlesWrapper {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.InfoTitle {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: $darkGray;
+}
+
+.InfoSubTitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000;
+}
+
+.PercentDeals {
+  margin-left: auto;
+  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 30px;
+  color: #ffffff;
+  width: 50px;
+  height: 24px;
+  background: $primaryColor;
+  border-radius: 100px;
+}
+
+.Content {
+  width: 100%;
+  display: flex;
+  min-height: 500px;
+}
+
+.Title {
+  color: #717779;
+  margin: 20px 0;
+}
+
+.Divider {
+  border-bottom: 1px solid #dce5e9;
+  margin: 20px 0;
+}
+
+.Chat__wrapper {
+  position: relative;
+}
+.Chat__messages {
+  position: relative;
+  min-height: 500px;
+  max-height: 500px;
+  padding: 30px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    margin-left: 30px;
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #8b9296;
+    border-radius: 100px;
+  }
+}
+
+.Chat__actions {
+  position: absolute;
+  top: 500px;
+  right: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Chat__user-input {
+  position: relative;
+  border-top: 1px solid #dce5e9;
+  padding: 24px 32px 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Chat__input {
+  padding: 10px 11px;
+  outline: none;
+  resize: none;
+  width: 350px;
+  min-height: 37px;
+  max-height: 150px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #132026;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  border-radius: 24px;
+}
+
+.Chat__message {
+  display: flex;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.Chat__message--my {
+  flex-direction: row-reverse;
+  .Chat__message__bubble {
+    border-radius: 14px 14px 0 14px;
+  }
+}
+
+.Chat__message__avatar {
+  width: 36px;
+  height: 36px;
+}
+
+.Chat__message__bubble {
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 14px 14px 14px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #132026;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 500px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.Chat__message__system {
+  padding: 10px;
+  background: #ffffff;
+  border: 2px solid $primaryColor;
+  border-radius: 14px 14px 14px 0px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: $red;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 500px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.TextField {
+  font-family: Inter !important;
+  font-weight: 600 !important;
+}
+
+.Chat_background {
+  background: #fff;
+}
+
+.ClipButton {
+  width: 35px;
+  min-width: auto !important;
+  height: 35px;
+  border: 1px solid #d9d9d9 !important;
+  box-sizing: border-box !important;
+  border-radius: 50% !important;
+}
+
+.ClipIcon {
+  width: 15px;
+}
+
+.SubmitButton {
+  width: 37px;
+  min-width: auto !important;
+  height: 35px;
+  box-sizing: border-box !important;
+  border-radius: 50% !important;
+  background: #a59595 !important;
+}
+
+.WarningText {
+  margin-top: 10px;
+  color: #ff1616;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.setValueVolumeErrorAlert {
+  margin-bottom: 20px;
+}
+
+.messagesNewDateTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.messagesCreadtedAt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.attachmentItems {
+  margin-left: 32px;
+  display: flex;
+}
+
+.attachmentItem {
+  margin-right: 10px;
+}
+
+.deleteAttachmentIcon {
+  margin: 5px;
+}

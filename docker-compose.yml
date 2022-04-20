@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  p2p-front:
+    image: node:16
+    container_name: cdex-front
+    restart: always
+    command: sh -c 'cd /usr/src/app/frontend  && npm install && npm run start'
+    volumes:
+      - ./:/usr/src/app/frontend/
+    ports:
+      - '3021:8080'
+    networks:
+      - cdex-network
+
+networks:
+  cdex-network:

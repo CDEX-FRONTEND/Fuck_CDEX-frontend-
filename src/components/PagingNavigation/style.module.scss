@@ -1,0 +1,31 @@
+@import "../../styles/_variables.scss";
+.pagingNavigation {
+  margin-top: 25px;
+  display: flex;
+
+  ul {
+    row-gap: 10px;
+  }
+
+  li {
+    button {
+      color: black;
+      border-color: transparent;
+      background-color: #f5f5f5;
+
+      &[class*="selected"] {
+        color: $primaryColor;
+        border-color: $primaryColor;
+        background-color: transparent;
+      }
+    }
+
+    div[class*="ellipsis"] {
+      color: transparent;
+      background-image: url("../../icons/PagingSpacerIcon.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

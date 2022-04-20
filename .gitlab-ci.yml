@@ -1,0 +1,53 @@
+stages:
+  - deploy
+
+.front.deploy:
+  stage: deploy
+  image: node:16
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+  before_script:
+    - apt update && apt install -qq rsync openssh-client gettext-base
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - cat .devops/templates/front.env | envsubst > .env
+    - npm ic
+    - npm run build
+    - rsync -ar --delete-after ./build/  ${USER?}@${HOST?}:${PROJECT_PATH?}/
+  after_script:
+    - ssh-agent -k
+  interruptible: true
+  tags:
+    - docker
+
+dev.deploy.front:
+  extends: .front.deploy
+  variables:
+    PROJECT_PATH: /home/cdex/project/front
+    USER: cdex
+    SSH_PRIVATE_KEY: '${DEV_SSH_PRIVATE_KEY}'
+    HOST: '${DEV_HOST}'
+    REACT_APP_HTTP_API_URL: "https://api.dev.cdex.avsconsulting.ru/"
+    GOOGLE_RECAPTCHA_SITE_KEY: '${DEV_GOOGLE_RECAPTCHA_SITE_KEY}'
+  tags:
+    - docker  
+  only:
+    refs:
+      - develop
+
+branch.deploy.front:
+  extends: .front.deploy
+  variables:
+    PROJECT_PATH: '/home/cdex/project/DEV/${CI_COMMIT_BRANCH}'
+    USER: cdex
+    SSH_PRIVATE_KEY: '${DEV_SSH_PRIVATE_KEY}'
+    HOST: '${DEV_HOST}'
+    REACT_APP_HTTP_API_URL: "https://api.dev.cdex.avsconsulting.ru/"
+  tags:
+    - docker  
+  rules:
+    - if: '$CI_COMMIT_BRANCH =~ /^dev-\d+$/'
+

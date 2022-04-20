@@ -1,0 +1,94 @@
+.select{
+  font-style: normal!important;
+  font-weight: 550!important;
+  font-size: 20px!important;
+  line-height: 30px;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  color: #132026!important;
+  font-family: Montserrat, sans-serif!important;
+}
+
+.next__Price{
+  font-style: normal!important;
+  font-weight: 550!important;
+  font-size: 20px!important;
+  line-height: 30px;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+  color: #ED2B2B!important;
+  font-family: Montserrat, sans-serif!important;
+}
+
+.price__of_market{
+  font-weight: bold!important;
+  font-family: Montserrat, sans-serif!important;
+  color: #132026!important;
+  font-size: 14px!important;
+  border: 2px solid #DA2B90!important;
+}
+
+.other__prices{
+  font-weight: bold!important;
+  font-size: 14px!important;
+  font-family: Montserrat, sans-serif!important;
+  border: 2px solid #D8E5EB!important;
+  background: white!important;
+}
+
+.btn__buy{
+  padding: 5px 30px 7px!important;
+  width: 114px!important;
+  height: 42px!important;
+  font-family: Montserrat, sans-serif!important;
+  background: radial-gradient(100% 328.33% at 0% 100%, #FF661A 0%, #BF00E6 100%) !important;
+  border-radius: 100px!important;
+  font-style: normal!important;
+  font-weight: 700!important;
+  font-size: 14px!important;
+  line-height: 30px!important;
+  color: #FFFFFF!important;
+  margin: 0 10px!important;
+}
+.__prodat{
+  padding: 5px 30px 7px!important;
+  width: 114px!important;
+  height: 42px!important;
+  font-family: Montserrat, sans-serif!important;
+  background:  #8B9296!important;
+  border-radius: 100px!important;
+  font-style: normal!important;
+  font-weight: 700!important;
+  font-size: 14px!important;
+  line-height: 30px!important;
+  color: #FFFFFF!important;
+  margin: 0 10px!important;
+}
+.__commisia{
+  display: flex!important;
+  justify-content: end;
+  position: relative;
+  top: 13px;
+}
+
+.__wss{
+  position: relative;
+  display: flex;
+  align-self: end;
+  top: 20px;
+  left: 65px;
+}
+
+._divleft{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.__name{
+  font-family: Montserrat, sans-serif!important;
+  font-style: normal!important;
+  font-weight: 700!important;
+  font-size: 16px!important;
+  line-height: 30px!important;
+  color: #132026!important;
+  font-feature-settings: 'tnum' on, 'lnum' on!important;
+}

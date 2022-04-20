@@ -1,0 +1,97 @@
+@import '../../../styles/variables';
+
+.mainContainer {
+  display: flex;
+  padding-top: 15px;
+  flex-direction: column;
+}
+
+.itemContainer {
+  display: flex;
+  padding: 30px 0px 30px 0px;
+  border-bottom: 1px solid #dce5e9;
+}
+
+.firstItem {
+  display: flex;
+  min-width: 25%;
+}
+
+.item {
+  min-width: 26%;
+}
+
+.firstItemLabel {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.itemLabel {
+  font-size: 12px;
+  line-height: 15px;
+  color: #132026;
+  opacity: 0.6;
+  padding-bottom: 11px;
+}
+
+.itemValue {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.firstItemExtraInfo {
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration-line: underline;
+}
+
+.itemImg {
+  width: 60px;
+  height: 60px;
+  background: #c4c4c4;
+  border-radius: 50%;
+}
+
+.itemText {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.textButton {
+  text-decoration: underline;
+  cursor: pointer;
+  height: 15px;
+  font-size: 12px;
+  color: #132026;
+}
+
+.firstItemLabel {
+  height: 17px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+.firstItemContent {
+  display: flex;
+}
+.itemLabel {
+  height: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #132026;
+}
+.itemValue {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #132026;
+}
+.icon {
+  margin-right: 5%;
+}

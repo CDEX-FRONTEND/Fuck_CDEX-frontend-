@@ -1,0 +1,17 @@
+.AuthenticationProgress {
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    &-rect {
+        width: 12px;
+        height: 4px;
+        background-color: #BAC6CA;
+        border-radius: 21px;
+        &--level-1 {
+            background-color: #FD9816;
+        }
+        &--level-2 {
+            background-color: #00B900;
+        }
+    }
+}
